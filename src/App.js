@@ -15,16 +15,16 @@ function App() {
           if (flag) setMbtiList({...mbtiList, [index]: [mbtiList[index][0] + 2, num]});
           else setMbtiList({...mbtiList, [index]: [mbtiList[index][0] - 2, num]});
           let tag = document.getElementById([num, flag]);
-          tag.classList.add("clicked")
+          tag.classList.add("clicked");
           let tagD = document.getElementById([num, !flag]);
-          tagD.classList.remove("clicked")
+          tagD.classList.remove("clicked");
         }
 
         if (num !== curState + 1) {
           return null;
         }
         let tag = document.getElementById([num, flag]);
-        tag.classList.add("clicked")
+        tag.classList.add("clicked");
         setClickedFlag({...clickedFlag, [num]: flag});
         setCurState(curState + 1);
         if (flag) setMbtiList({...mbtiList, [index]: [mbtiList[index][0] + 1, num]});
@@ -48,6 +48,15 @@ function App() {
     setCurState(0);
     console.log("e", e);
     e.view.location.href= "#zz";
+    let allDiv = document.getElementById("zz");
+    console.log("aa", allDiv);
+    console.log("ccc", allDiv.childNodes);
+    for (let i = 1; i < 13; i++) {
+      let tagTrue = document.getElementById(`${i},true`);
+      let tagFalse = document.getElementById(`${i},false`);
+      tagTrue.classList.remove("clicked");
+      tagFalse.classList.remove("clicked");
+    }
   }
   return (
     <div id="zz" className="gowon" style={{display: "flex", flexDirection: "column", width: "100%", height: "100%", alignItems: "center", justifyContent: "center"}}>
