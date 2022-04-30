@@ -46,11 +46,8 @@ function App() {
     setMbtiList({"0": [0, 0], "1": [0, 0], "2": [0, 0], "3": [0, 0]});
     setClickedFlag({"1": null,"2": null,"3": null, "4": null, "5": null,"6": null,"7": null, "8": null, "9": null,"10": null,"11": null, "12": null});
     setCurState(0);
-    console.log("e", e);
     e.view.location.href= "#zz";
     let allDiv = document.getElementById("zz");
-    console.log("aa", allDiv);
-    console.log("ccc", allDiv.childNodes);
     for (let i = 1; i < 13; i++) {
       let tagTrue = document.getElementById(`${i},true`);
       let tagFalse = document.getElementById(`${i},false`);
