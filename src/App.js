@@ -1,10 +1,20 @@
 import {useState, useEffect} from "react";
 import "./App.css";
+import ResultModal from "./ResultModal";
 
 function App() {
   const [mbtiList, setMbtiList] = useState({"0": [0, 0], "1": [0, 0], "2": [0, 0], "3": [0, 0]});
   const [clickedFlag, setClickedFlag] = useState({"1": null,"2": null,"3": null, "4": null, "5": null,"6": null,"7": null, "8": null, "9": null,"10": null,"11": null, "12": null})
   const [curState, setCurState] = useState(0);
+  const [isOpen, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleModal1Submit = () => {
+    // 모달1 비지니스 로직
+    resetMbti()
+    setOpen(false);
+  };
   const makeButton = (index, text, flag, num) => {
     return <div id={[num, flag]} style={{display: "flex", width: "45%", minHeight: "20vh", border: "1px dashed lightgray", justifyContent: "center", alignItems: "center", margin: "1rem", fontSize: "2vw", backgroundColor: "rgba(255, 255, 255, 0.3", cursor: "pointer"}} 
       onClick={() => {
@@ -31,7 +41,7 @@ function App() {
         else setMbtiList({...mbtiList, [index]: [mbtiList[index][0] - 1, num]});
       }}
       className="tButton">
-      <a href={`#${num !== 12 && String.fromCharCode(num + 97)+String.fromCharCode(num + 97)}`} style={{textDecoration: "none", color: "black", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}>{text}</a>
+      <a href={`#${num !== 13 && String.fromCharCode(num + 97)+String.fromCharCode(num + 97)}`} style={{textDecoration: "none", color: "black", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}>{text}</a>
     </div>
   }
   const decideMbti = () => {
@@ -42,12 +52,11 @@ function App() {
     data = mbtiList[3][0] > 0 ? data + "J" : data + "P";
     alert(data);
   }
-  const resetMbti = (e) => {
+  const resetMbti = () => {
     setMbtiList({"0": [0, 0], "1": [0, 0], "2": [0, 0], "3": [0, 0]});
     setClickedFlag({"1": null,"2": null,"3": null, "4": null, "5": null,"6": null,"7": null, "8": null, "9": null,"10": null,"11": null, "12": null});
     setCurState(0);
-    e.view.location.href= "#zz";
-    let allDiv = document.getElementById("zz");
+    // e.view.location.href= "#zz";
     for (let i = 1; i < 13; i++) {
       let tagTrue = document.getElementById(`${i},true`);
       let tagFalse = document.getElementById(`${i},false`);
@@ -57,13 +66,19 @@ function App() {
   }
   return (
     <div id="zz" className="gowon" style={{display: "flex", flexDirection: "column", width: "100%", height: "100%", alignItems: "center", justifyContent: "center"}}>
-      <div style={{display: "flex", margin: "2rem", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "11vw", height: "25vh", display: "flex", justifyContent: "center", alignItems: "center", paddingTop: "15vh"}}>비전 선교단</div>
-        <div style={{fontSize: "5vw", height: "20vh", display: "flex", justifyContent: "center", alignItems: "center"}}>나의 민족 MBTI 는?</div>
-        <div style={{fontSize: "7vw", height: "20vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
-          <div className="sButton"><a href="#aa" style={{textDecoration: "none", color: "white", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}>Start</a></div>
+      
+      <div id="first" className="gyeonggi" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh", fontWeight: "100"}}>
+        <div style={{fontSize: "12vw", height: "20vh", display: "flex", justifyContent: "center", alignItems: "center", paddingTop: "35vh", color: "#73788F"}}>비전 선교단</div>
+        <div style={{fontSize: "4.5vw", height: "10vh", display: "flex", justifyContent: "center", alignItems: "center", paddingTop: "5vh"}}>나의 민족 MBTI 는?</div>
+        <div style={{fontSize: "7vw", height: "40vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <a href="#aa" style={{fontSize: "3vw", color: "#73788F", textDecoration: "underline", textUnderlinePosition: "under"}}>시작하기</a>
+          {/* <div className="sButton"><a href="#aa" style={{textDecoration: "none", color: "white", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}>Start</a></div> */}
         </div>
-        
+        {/* <button onClick={handleClick}>모달 열기</button> */}
+          <ResultModal
+              isOpen={isOpen}
+              onSubmit={handleModal1Submit}
+                  />
       </div>
       <div id="aa" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
         <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
@@ -149,17 +164,14 @@ function App() {
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
           {makeButton(3, <span>이건 내 계획과 어긋나는 일이다.<br></br> 갑자기 스트레스가 확 밀려온다</span>, true, 12)}
           {makeButton(3, <span>모든게 계획대로 흘러갈 수는 없다.<br></br> 그럴 수도 있다고 생각하고 넘긴다.</span>, false, 12)}
-          <div onClick={() => decideMbti()} style={{borderRadius: "13vh", height: "13vh", width: "13vh", border: "1px dashed gray", display: "flex", justifyContent: "center", alignItems: "center", background: "rgba(255,255,255,.6)", cursor: "pointer", marginTop: "2vh", fontSize: "2vw", wordBreak: "keep-all"}}>결과 <br></br>확인</div>
+          {/* <div onClick={() => decideMbti()} style={{borderRadius: "13vh", height: "13vh", width: "13vh", border: "1px dashed gray", display: "flex", justifyContent: "center", alignItems: "center", background: "rgba(255,255,255,.6)", cursor: "pointer", marginTop: "2vh", fontSize: "2vw", wordBreak: "keep-all"}}>결과 <br></br>확인</div> */}
         </div>
       </div>
-      <div id="mm" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
+      <div id="mm" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh", justifyContent: "center"}}>
         {/* <button onClick={() => decideMbti()} style={{width: "40%", height: "4rem", marginBottom: "5rem", cursor: "pointer"}}>결과 확인하기</button> */}
-        <button onClick={(e) => resetMbti(e)} style={{width: "40%", height: "4rem", marginBottom: "5rem", cursor: "pointer"}}>다시 확인하기</button>
-
+        <a onClick={handleClick} style={{fontSize: "3vw", color: "#73788F", textDecoration: "underline", textUnderlinePosition: "under", cursor: "pointer"}}>결과확인</a>
+        {/* <button onClick={(e) => resetMbti(e)} style={{width: "40%", height: "4rem", marginBottom: "5rem", cursor: "pointer"}}>다시 확인하기</button> */}
       </div>
-      
-      
-
     </div>
   );
 }
