@@ -16,9 +16,8 @@ function App() {
     setOpen(false);
   };
   const makeButton = (index, text, flag, num) => {
-    return <div id={[num, flag]} style={{display: "flex", width: "45%", minHeight: "20vh", border: "1px dashed lightgray", justifyContent: "center", alignItems: "center", margin: "1rem", fontSize: "2vw", backgroundColor: "rgba(255, 255, 255, 0.3", cursor: "pointer"}} 
+    return <div id={[num, flag]} style={{display: "flex", width: "45%", minHeight: "20vh", border: "1px dashed lightgray", justifyContent: "center", alignItems: "center", margin: "1rem", fontSize: "2vw", backgroundColor: "rgba(255, 255, 255, 0.4", cursor: "pointer"}} 
       onClick={() => {
-        console.log("c")
         if (num === curState) {
           if (clickedFlag[num] === flag) return null;
           setClickedFlag({...clickedFlag, [num]: flag});
@@ -47,9 +46,9 @@ function App() {
   const decideMbti = () => {
     let data = ""
     data = mbtiList[0][0] > 0 ? "E" : "I";
-    data = mbtiList[1][0] > 0 ? data + "S" : data + "N";
-    data = mbtiList[2][0] > 0 ? data + "T" : data + "F";
-    data = mbtiList[3][0] > 0 ? data + "J" : data + "P";
+    data = mbtiList[1][0] > 0 ? data + "N" : data + "S";
+    data = mbtiList[2][0] > 0 ? data + "F" : data + "T";
+    data = mbtiList[3][0] > 0 ? data + "P" : data + "J";
     alert(data);
   }
   const resetMbti = () => {
@@ -68,7 +67,7 @@ function App() {
     <div id="zz" className="gowon" style={{display: "flex", flexDirection: "column", width: "100%", height: "100%", alignItems: "center", justifyContent: "center"}}>
       
       <div id="first" className="gyeonggi" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh", fontWeight: "100"}}>
-        <div style={{fontSize: "12vw", height: "20vh", display: "flex", justifyContent: "center", alignItems: "center", paddingTop: "35vh", color: "#73788F"}}>비전 선교단</div>
+        <div style={{fontSize: "12vw", height: "20vh", display: "flex", justifyContent: "center", alignItems: "center", paddingTop: "35vh", color: "#73788F"}}>비전선교단</div>
         <div style={{fontSize: "4.5vw", height: "10vh", display: "flex", justifyContent: "center", alignItems: "center", paddingTop: "5vh"}}>나의 민족 MBTI 는?</div>
         <div style={{fontSize: "7vw", height: "40vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
           <a href="#aa" style={{fontSize: "3vw", color: "#73788F", textDecoration: "underline", textUnderlinePosition: "under"}}>시작하기</a>
@@ -81,89 +80,89 @@ function App() {
                   />
       </div>
       <div id="aa" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교지에서 파티에 초대를 받았다. 나는?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(0, <span>사람들과 만나서 놀아야 한다. <br></br>집에 혼자 있으면 괜히 울적해지기만 한다."</span>, true, 1)}
-          {makeButton(0, <span>집에서 조용히 쉬고 싶다. <br></br>이럴 때 나가봤자 기만 빨린다.</span>, false, 1)}
+          {makeButton(0, <span>"재밌겠는데? 가볼까?"" <br></br>라고 생각한다.</span>, true, 1)}
+          {makeButton(0, <span>"파티 말고 현지인과 소수로 놀고 싶은데?"" <br></br>라고 생각한다.</span>, false, 1)}
         </div>
       </div>
       <div id="bb" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>사역 중 점심시간이 되었는데 밥 먹자는 말이 없다.</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(0, <span>이 일을 해냈을 때<br></br> 얻게 될 보상이 기대되기 때문이다.</span>, true, 2)}
-          {makeButton(0, <span>이 일을 하지 않았을 때<br></br> 잃게 될 것들이 있기 때문이다</span>, false, 2)}
+          {makeButton(0, <span>밥 안드시냐고 주변에 물어본다.</span>, true, 2)}
+          {makeButton(0, <span>눈치 보다가 누가 물어보기 전까진<br></br> 가만히 있는다.</span>, false, 2)}
         </div>
       </div>
       <div id="cc" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>현지인을 만났을 때, 팀원들이 머뭇거리고 있다. 나는?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(0, <span>어색한 침묵은 못 견디겠다 <br></br>무슨 말이라도 걸어 본다</span>, true, 3)}
-          {makeButton(0, <span>어색하더라도 누군가 말을 걸지 않으면<br></br> 왠만해선 먼저 말을 걸지 않는다.</span>, false, 3)}
+          {makeButton(0, <span>내가 먼저 다가가 말을 건다.</span>, true, 3)}
+          {makeButton(0, <span>팀원들이 먼저 대화를 열어 가기를 기대한다.</span>, false, 3)}
         </div>
       </div>
 
       <div id="dd" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교지를 왔는데 전체 일정을 모르겠다</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(1, <span>재밌는 영화였다.<br></br> 배고프니깐 밥이나 먹으러 가야겠다.</span>, true, 4)}
-          {makeButton(1, <span>여운이 가시질 않는다. <br></br>포털 사이트에 영화 해석을 검색해본다</span>, false, 4)}
+          {makeButton(1, <span>전체 일정이 어떻게 되는 지<br></br> 파악하려고 노력한다.</span>, true, 4)}
+          {makeButton(1, <span>하루하루 만나는 사람에게 집중한다.</span>, false, 4)}
         </div>
       </div>
       <div id="ee" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교 일정을 계획 중이다. 어떻게 하고 싶은가?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(1, <span>멜로디가 좋으면 장땡이다.<br></br> 가사는 크게 신경쓰지 않는다.</span>, true, 5)}
-          {makeButton(1, <span>중요한 건 가사다.<br></br> 가사를 음미하며 노래 속 주인공으로 빙의한다.</span>, false, 5)}
+          {makeButton(1, <span>자유로운 방식의 선교를 계획한다.</span>, true, 5)}
+          {makeButton(1, <span>안전하게 확실한 계획과<br></br> 가이드라인을 만든다.</span>, false, 5)}
         </div>
       </div>
       <div id="ff" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교지를 다녀와서 나는 간증을 한다. 나는?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(1, <span>목적지가 우선이다.<br></br> 일단 가기로 한 곳부터 간다.</span>, true, 6)}
-          {makeButton(1, <span>궁금한 건 못참는다. <br></br>일단 들어가서 구경부터 하고 본다</span>, false, 6)}
+          {makeButton(1, <span>전체적으로 느낀 점을 나눈다.</span>, true, 6)}
+          {makeButton(1, <span>하루하루 꼼꼼하게 <br></br>경험을 전달한다.</span>, false, 6)}
         </div>
       </div>
 
       <div id="gg" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>영혼이 복음을 영접했다. 나는?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(2, <span>무슨 차 샀어? <br></br>얼마 줬어?</span>, true, 7)}
-          {makeButton(2, <span>오 대박 축하해! <br></br>그 동안 고생한 보람이 있네!</span>, false, 7)}
+          {makeButton(2, <span>하나님의 역사하심에<br></br>감동의 눈물을 흘린다.</span>, true, 7)}
+          {makeButton(2, <span>앞으로 이 영혼이 현실적으로 <br></br>신앙생활을 할 수 있을지 고민한다.</span>, false, 7)}
         </div>
       </div>
       <div id="hh" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>팀의 회계가 재정의 일부를 잃어버렸다. 나는?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(2, <span>싫어하든지 말든지 내가 알 바 아니다. <br></br>어차피 모든 사람이 나를 좋아할 순 없다.</span>, true, 8)}
-          {makeButton(2, <span>왜 나를 싫어하지? 내가 뭘 잘못했나? <br></br>집에 가서도 계속 생각나고 신경쓰인다</span>, false, 8)}
+          {makeButton(2, <span>회계를 맡은 팀원의 마음이 <br></br>어렵지 않을 수 있도록 위로 해준다.</span>, true, 8)}
+          {makeButton(2, <span>다시 한 번 재정 계획을 수정한다.</span>, false, 8)}
         </div>
       </div>
       <div id="ii" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>현지 영혼이 자신의 어려움을 토로한다.</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(2, <span>내가 해내지 못했다는 것에 대한 좌절감이다</span>, true, 9)}
-          {makeButton(2, <span>나의 실패에 대한 다른 사람들의 평판이다</span>, false, 9)}
+          {makeButton(2, <span>너무 힘들었겠다. 영혼을 위로해준다.</span>, true, 9)}
+          {makeButton(2, <span>이렇게 해보는 건 어때?<br></br>자신의 의견을 전달해준다.</span>, false, 9)}
         </div>
       </div>
       <div id="jj" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교지 출발전에 나는?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(3, <span>자료조사부터 발표까지 세세하게 계획부터 세운다.</span>, true, 10)}
-          {makeButton(3, <span>일단 자료조사부터 하면서 틀을 잡아간다.</span>, false, 10)}
+          {makeButton(3, <span>누구를 만날지?<br></br>어떤 일이 있을지 기대하며 설레한다.</span>, true, 10)}
+          {makeButton(3, <span>빠진 건 없는지 짐을 꼼꼼히 챙긴다.</span>, false, 10)}
         </div>
       </div>
       <div id="kk" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교지에서 타려던 버스를 놓쳤다.</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(3, <span>점심은 여기서 먹고, 커미는 여기서 먹어야지...<br></br>이미 머릿속에 루트를 그려 놓았다</span>, true, 11)}
-          {makeButton(3, <span>일단 만나서 뭘 할지 생각해 본다.</span>, false, 11)}
+          {makeButton(3, <span>당황스럽지만, 어쩔 수 없지.<br></br> 다음 버스 타자!</span>, true, 11)}
+          {makeButton(3, <span>다음 버스가 몇 시지? <br></br>이후 일정에 무리는 없나?</span>, false, 11)}
         </div>
       </div>
       <div id="ll" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
-        <div style={{fontSize: "5vw", height: "20vh", marginTop: "15vh", fontWeight: "600"}}>나는 기분이 안 좋을 때</div>
+        <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교 마지막 날에 새로운 장소를 발견한 나는?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(3, <span>이건 내 계획과 어긋나는 일이다.<br></br> 갑자기 스트레스가 확 밀려온다</span>, true, 12)}
-          {makeButton(3, <span>모든게 계획대로 흘러갈 수는 없다.<br></br> 그럴 수도 있다고 생각하고 넘긴다.</span>, false, 12)}
+          {makeButton(3, <span>어떤 장소인지 궁금하다.<br></br> 일단 가서 구경한다.</span>, true, 12)}
+          {makeButton(3, <span>우선 계획된 일정에<br></br> 무리가 없는지 고려한다.</span>, false, 12)}
           {/* <div onClick={() => decideMbti()} style={{borderRadius: "13vh", height: "13vh", width: "13vh", border: "1px dashed gray", display: "flex", justifyContent: "center", alignItems: "center", background: "rgba(255,255,255,.6)", cursor: "pointer", marginTop: "2vh", fontSize: "2vw", wordBreak: "keep-all"}}>결과 <br></br>확인</div> */}
         </div>
       </div>
