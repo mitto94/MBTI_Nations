@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/MBTI_Nations/static/css/main.fd48d8bc.css",
-    "main.js": "/MBTI_Nations/static/js/main.50cb47e5.js",
+    "main.css": "/MBTI_Nations/static/css/main.36732874.css",
+    "main.js": "/MBTI_Nations/static/js/main.cc25a333.js",
     "static/js/787.f633bd44.chunk.js": "/MBTI_Nations/static/js/787.f633bd44.chunk.js",
+    "static/media/last.jpg": "/MBTI_Nations/static/media/last.9447df37ebde15fe0df0.jpg",
+    "static/media/first.jpg": "/MBTI_Nations/static/media/first.236b1a639c6d6c116d0c.jpg",
     "static/media/b.png": "/MBTI_Nations/static/media/b.8f12286e6a0f63f6913a.png",
     "static/media/k.png": "/MBTI_Nations/static/media/k.03cc4e91462014eca293.png",
     "static/media/d.png": "/MBTI_Nations/static/media/d.3966ba3ed9f0c2ee9c53.png",
@@ -13,15 +15,31 @@
     "static/media/g.png": "/MBTI_Nations/static/media/g.2bdea72bca96cfce3354.png",
     "static/media/a.png": "/MBTI_Nations/static/media/a.d7284070825d328e1f62.png",
     "static/media/j.png": "/MBTI_Nations/static/media/j.3b7460358d4863fc1022.png",
+    "static/media/infp.png": "/MBTI_Nations/static/media/infp.32ab8b455e7d82279ade.png",
+    "static/media/intp.png": "/MBTI_Nations/static/media/intp.32ab8b455e7d82279ade.png",
     "static/media/i.png": "/MBTI_Nations/static/media/i.2287740d36f0e39cfc13.png",
+    "static/media/estj.png": "/MBTI_Nations/static/media/estj.f8c8733a0c6d7e53f09d.png",
+    "static/media/istj.png": "/MBTI_Nations/static/media/istj.ebc16c676fd3a75f4d44.png",
+    "static/media/entj.png": "/MBTI_Nations/static/media/entj.5e48d3b9e3812e0bcd37.png",
+    "static/media/intj.png": "/MBTI_Nations/static/media/intj.5e48d3b9e3812e0bcd37.png",
     "static/media/h.png": "/MBTI_Nations/static/media/h.816183173750c5aed982.png",
+    "static/media/esfp.png": "/MBTI_Nations/static/media/esfp.f7d7038fdc74cb7b4e07.png",
+    "static/media/istp.png": "/MBTI_Nations/static/media/istp.f7d7038fdc74cb7b4e07.png",
+    "static/media/infj.png": "/MBTI_Nations/static/media/infj.8511d37ed7bdee4fbefe.png",
+    "static/media/entp.png": "/MBTI_Nations/static/media/entp.5aaa10ec99d9ea8df784.png",
+    "static/media/esfj.png": "/MBTI_Nations/static/media/esfj.928ef9cf8fdcecd76f65.png",
+    "static/media/isfj.png": "/MBTI_Nations/static/media/isfj.928ef9cf8fdcecd76f65.png",
+    "static/media/enfj.png": "/MBTI_Nations/static/media/enfj.ef8114f2c613fd204fd8.png",
+    "static/media/estp.png": "/MBTI_Nations/static/media/estp.ef8114f2c613fd204fd8.png",
+    "static/media/enfp.png": "/MBTI_Nations/static/media/enfp.8e87176fddaa2f6aa50a.png",
+    "static/media/isfp.png": "/MBTI_Nations/static/media/isfp.5d2647746e92b7bb3255.png",
     "index.html": "/MBTI_Nations/index.html",
-    "main.fd48d8bc.css.map": "/MBTI_Nations/static/css/main.fd48d8bc.css.map",
-    "main.50cb47e5.js.map": "/MBTI_Nations/static/js/main.50cb47e5.js.map",
+    "main.36732874.css.map": "/MBTI_Nations/static/css/main.36732874.css.map",
+    "main.cc25a333.js.map": "/MBTI_Nations/static/js/main.cc25a333.js.map",
     "787.f633bd44.chunk.js.map": "/MBTI_Nations/static/js/787.f633bd44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd48d8bc.css",
-    "static/js/main.50cb47e5.js"
+    "static/css/main.36732874.css",
+    "static/js/main.cc25a333.js"
   ]
 }
