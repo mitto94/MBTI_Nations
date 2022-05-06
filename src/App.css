@@ -52,6 +52,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #bb {
     background-image: url(../src/image/b.png);
@@ -60,6 +61,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #cc {
     background-image: url(../src/image/c.png);
@@ -68,6 +70,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #dd {
     background-image: url(../src/image/d.png);
@@ -76,6 +79,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #ee {
     background-image: url(../src/image/e.png);
@@ -84,6 +88,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #ff {
     background-image: url(../src/image/f.png);
@@ -92,6 +97,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #gg {
     background-image: url(../src/image/g.png);
@@ -100,6 +106,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #hh {
     background-image: url(../src/image/h.png);
@@ -108,6 +115,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #ii {
     background-image: url(../src/image/i.png);
@@ -116,6 +124,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #jj {
     background-image: url(../src/image/j.png);
@@ -124,6 +133,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #kk {
     background-image: url(../src/image/k.png);
@@ -132,6 +142,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #ll {
     background-image: url(../src/image/l.png);
@@ -140,6 +151,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #mm {
     background-image: url(../src/image/last.jpg);
@@ -148,6 +160,7 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
 }
 #first {
     background-image: url(../src/image/first.jpg);
@@ -156,4 +169,150 @@ body {
     /* max-width: 100vw; */
     background-repeat : no-repeat;
     background-size : cover;
+    background-position: center;
+}
+
+#INFP {
+    background-image: url(../src/image/result/infp.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ENFJ {
+    background-image: url(../src/image/result/enfj.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ENFP {
+    background-image: url(../src/image/result/enfp.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ENTJ {
+    background-image: url(../src/image/result/entj.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ENTP {
+    background-image: url(../src/image/result/entp.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ESFJ {
+    background-image: url(../src/image/result/esfj.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ESFP {
+    background-image: url(../src/image/result/esfp.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ESTJ {
+    background-image: url(../src/image/result/estj.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ESTP {
+    background-image: url(../src/image/result/estp.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#INFJ {
+    background-image: url(../src/image/result/infj.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#INTJ {
+    background-image: url(../src/image/result/intj.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#INTP {
+    background-image: url(../src/image/result/intp.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ISFJ {
+    background-image: url(../src/image/result/isfj.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ISFP {
+    background-image: url(../src/image/result/isfp.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ISTJ {
+    background-image: url(../src/image/result/istj.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
+}
+#ISTP {
+    background-image: url(../src/image/result/istp.png);
+    height: 100%;
+    max-height: 100vh;
+    /* max-width: 100vw; */
+    background-repeat : no-repeat;
+    background-size : contain;
+    background-position: center;
 }

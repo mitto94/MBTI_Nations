@@ -7,11 +7,13 @@ function App() {
   const [clickedFlag, setClickedFlag] = useState({"1": null,"2": null,"3": null, "4": null, "5": null,"6": null,"7": null, "8": null, "9": null,"10": null,"11": null, "12": null})
   const [curState, setCurState] = useState(0);
   const [isOpen, setOpen] = useState(false);
+  const [result, setResult] = useState("");
   const handleClick = () => {
     setOpen(true);
   };
   const handleModal1Submit = () => {
     // 모달1 비지니스 로직
+    window.scrollTo(0,0)
     resetMbti()
     setOpen(false);
   };
@@ -43,13 +45,13 @@ function App() {
       <a href={`#${num !== 13 && String.fromCharCode(num + 97)+String.fromCharCode(num + 97)}`} style={{textDecoration: "none", color: "black", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}>{text}</a>
     </div>
   }
-  const decideMbti = () => {
+  const decideMbti = async () => {
     let data = ""
     data = mbtiList[0][0] > 0 ? "E" : "I";
     data = mbtiList[1][0] > 0 ? data + "N" : data + "S";
     data = mbtiList[2][0] > 0 ? data + "F" : data + "T";
     data = mbtiList[3][0] > 0 ? data + "P" : data + "J";
-    alert(data);
+    setResult(data);
   }
   const resetMbti = () => {
     setMbtiList({"0": [0, 0], "1": [0, 0], "2": [0, 0], "3": [0, 0]});
@@ -70,13 +72,14 @@ function App() {
         <div style={{fontSize: "12vw", height: "20vh", display: "flex", justifyContent: "center", alignItems: "center", paddingTop: "35vh", color: "#73788F"}}>비전선교단</div>
         <div style={{fontSize: "4.5vw", height: "10vh", display: "flex", justifyContent: "center", alignItems: "center", paddingTop: "5vh"}}>나의 민족 MBTI 는?</div>
         <div style={{fontSize: "7vw", height: "40vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
-          <a href="#aa" style={{fontSize: "3vw", color: "#73788F", textDecoration: "underline", textUnderlinePosition: "under"}}>시작하기</a>
+          <a href="#aa" style={{fontSize: "2vw", color: "#73788F", textDecoration: "underline", textUnderlinePosition: "under"}}>시작하기</a>
           {/* <div className="sButton"><a href="#aa" style={{textDecoration: "none", color: "white", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}>Start</a></div> */}
         </div>
         {/* <button onClick={handleClick}>모달 열기</button> */}
           <ResultModal
               isOpen={isOpen}
               onSubmit={handleModal1Submit}
+              result={result}
                   />
       </div>
       <div id="aa" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
@@ -160,19 +163,16 @@ function App() {
       </div>
       <div id="ll" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
         <div style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교 마지막 날에 새로운 장소를 발견한 나는?</div>
-        <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
+        <div onClick={async () => await decideMbti()} style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
           {makeButton(3, <span>어떤 장소인지 궁금하다.<br></br> 일단 가서 구경한다.</span>, true, 12)}
           {makeButton(3, <span>우선 계획된 일정에<br></br> 무리가 없는지 고려한다.</span>, false, 12)}
-          {/* <div onClick={() => decideMbti()} style={{borderRadius: "13vh", height: "13vh", width: "13vh", border: "1px dashed gray", display: "flex", justifyContent: "center", alignItems: "center", background: "rgba(255,255,255,.6)", cursor: "pointer", marginTop: "2vh", fontSize: "2vw", wordBreak: "keep-all"}}>결과 <br></br>확인</div> */}
         </div>
       </div>
       <div id="mm" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh", justifyContent: "center"}}>
-        {/* <button onClick={() => decideMbti()} style={{width: "40%", height: "4rem", marginBottom: "5rem", cursor: "pointer"}}>결과 확인하기</button> */}
         <a onClick={handleClick} style={{fontSize: "3vw", color: "#73788F", textDecoration: "underline", textUnderlinePosition: "under", cursor: "pointer"}}>결과확인</a>
-        {/* <button onClick={(e) => resetMbti(e)} style={{width: "40%", height: "4rem", marginBottom: "5rem", cursor: "pointer"}}>다시 확인하기</button> */}
       </div>
     </div>
   );
 }
 
-export default App;
+export default App; 

@@ -1,6 +1,6 @@
 import ReactModal from 'react-modal';
 
-const ResultModal = ({ isOpen, onSubmit, onCancel }) => {
+const ResultModal = ({ isOpen, onSubmit, onCancel, result }) => {
   const handleClickSubmit = () => {
     onSubmit();
   };
@@ -8,12 +8,14 @@ const ResultModal = ({ isOpen, onSubmit, onCancel }) => {
   const handleClickCancel = () => {
     onCancel();
   };
+  if (!result) return null;
+  console.log("resu", result);
+
   return (
     <ReactModal isOpen={isOpen}>
-      <div>모달 입니다.</div>
-      <div>
-        <button onClick={handleClickSubmit}>확인</button>
-        {/* <button onClick={handleClickCancel}>취소</button> */}
+      <div id={`${result}`} style={{width: "100%", height: "90%"}}></div>
+      <div style={{height: "10%", width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <a onClick={handleClickSubmit} style={{fontSize: "1.75vw", color: "#73788F", textDecoration: "underline", textUnderlinePosition: "under", cursor: "pointer"}}>처음으로</a>
       </div>
     </ReactModal>
   );
