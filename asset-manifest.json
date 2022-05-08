@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MBTI_Nations/static/css/main.36732874.css",
-    "main.js": "/MBTI_Nations/static/js/main.cc25a333.js",
+    "main.js": "/MBTI_Nations/static/js/main.e5835344.js",
     "static/js/787.f633bd44.chunk.js": "/MBTI_Nations/static/js/787.f633bd44.chunk.js",
     "static/media/last.jpg": "/MBTI_Nations/static/media/last.9447df37ebde15fe0df0.jpg",
     "static/media/first.jpg": "/MBTI_Nations/static/media/first.236b1a639c6d6c116d0c.jpg",
@@ -35,11 +35,11 @@
     "static/media/isfp.png": "/MBTI_Nations/static/media/isfp.5d2647746e92b7bb3255.png",
     "index.html": "/MBTI_Nations/index.html",
     "main.36732874.css.map": "/MBTI_Nations/static/css/main.36732874.css.map",
-    "main.cc25a333.js.map": "/MBTI_Nations/static/js/main.cc25a333.js.map",
+    "main.e5835344.js.map": "/MBTI_Nations/static/js/main.e5835344.js.map",
     "787.f633bd44.chunk.js.map": "/MBTI_Nations/static/js/787.f633bd44.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36732874.css",
-    "static/js/main.cc25a333.js"
+    "static/js/main.e5835344.js"
   ]
 }
