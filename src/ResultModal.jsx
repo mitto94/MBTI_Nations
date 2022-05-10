@@ -13,7 +13,7 @@ const ResultModal = ({ isOpen, onSubmit, onCancel, result }) => {
   return (
     <ReactModal isOpen={isOpen}>
       <div id={`${result}`} style={{width: "100%", height: "90%"}}></div>
-      <div style={{fontSize: "1vw", opacity: 0.1, position: "absolute"}}>{result}</div>
+      <div style={{fontSize: "1vw", opacity: 0.07, position: "absolute"}}>{result}</div>
      
       <div className="gyeonggi" style={{height: "10%", width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
         <a className='mobFont' onClick={handleClickSubmit} style={{fontSize: "1.75vw", color: "#73788F", textDecoration: "underline", textUnderlinePosition: "under", cursor: "pointer"}}>처음으로</a>
