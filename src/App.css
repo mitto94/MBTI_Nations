@@ -316,3 +316,18 @@ body {
     background-size : contain;
     background-position: center;
 }
+@media (max-width: 600px) {
+.mobWidthFont {
+    width: 90% !important;
+    font-size: 4.5vw !important;
+}
+.mobFont {
+    font-size: 4.5vw !important;
+}
+.mobQu {
+    font-size: 6vw !important;
+    text-align: center;
+    word-break:keep-all;
+    width: 80% !important;
+}
+}
