@@ -99,14 +99,14 @@ function App() {
       <div id="cc" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
         <div className="mobQu" style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>선교지를 왔는데 전체 일정을 모르겠다.</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(1, <span>전체 일정이 어떻게 되는 지<br></br> 파악하려고 노력한다.</span>, true, 4, 3)}
+          {makeButton(1, <span>전체 일정이 어떻게 되는지<br></br> 파악하려고 노력한다.</span>, true, 4, 3)}
           {makeButton(1, <span>하루하루 만나는 사람에게 집중한다.</span>, false, 4, 3)}
         </div>
       </div>
       <div id="dd" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
         <div className="mobQu" style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>사역 중 점심시간이 되었는데 밥 먹자는 말이 없다.</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(0, <span>밥 안드시냐고 주변에 물어본다.</span>, true, 2, 4)}
+          {makeButton(0, <span>밥 안 드시냐고 주변에 물어본다.</span>, true, 2, 4)}
           {makeButton(0, <span>눈치 보다가 누가 물어보기 전까진<br></br> 가만히 있는다.</span>, false, 2, 4)}
         </div>
       </div>
@@ -120,7 +120,7 @@ function App() {
       <div id="ff" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
         <div className="mobQu" style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>팀의 회계가 재정의 일부를 잃어버렸다. 나는?</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(2, <span>회계를 맡은 팀원의 마음이 <br></br>어렵지 않을 수 있도록 위로 해준다.</span>, true, 8, 6)}
+          {makeButton(2, <span>회계를 맡은 팀원의 마음이 <br></br>어렵지 않을 수 있도록 위로해 준다.</span>, true, 8, 6)}
           {makeButton(2, <span>다시 한 번 재정 계획을 수정한다.</span>, false, 8, 6)}
         </div>
       </div>
@@ -141,7 +141,7 @@ function App() {
       <div id="ii" style={{display: "flex", alignItems: "center", width: "100%", flexDirection: "column", height: "100vh"}}>
         <div className="mobQu" style={{fontSize: "3.5vw", height: "20vh", marginTop: "20vh", fontWeight: "600"}}>현지 영혼이 자신의 어려움을 토로한다.</div>
         <div style={{display: "flex", flexDirection: "column", margin: "1rem", justifyContent: "center", width: "100%", textAlign: "center", alignItems: "center"}}>
-          {makeButton(2, <span>너무 힘들었겠다. 영혼을 위로해준다.</span>, true, 9, 9)}
+          {makeButton(2, <span>너무 힘들었겠다. 영혼을 위로해 준다.</span>, true, 9, 9)}
           {makeButton(2, <span>이렇게 해보는 건 어때?<br></br>자신의 의견을 전달해준다.</span>, false, 9, 9)}
         </div>
       </div>
